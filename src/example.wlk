@@ -24,6 +24,18 @@ object bruno{
 	var sed = false
 	var peso = 55000
 	
+	method esFeliz(){
+		return feliz
+	}
+	
+	method tieneSed(){
+		return sed
+	}
+	
+	method cuantoPesa(){
+		return peso
+	}
+	
 	method recibeMasajes(){
 		feliz = true
 	}
@@ -53,7 +65,48 @@ object bruno{
 	method estaPerfecto(){
 		return feliz and not sed and peso.between(50000, 70000)
 	}
+
+	method mediodiaEnCasa(){
+		self.comeFideos()
+		self.tomaAgua()
+		self.veNoticiero()
+	}
+}
+
+object ramiro{
+	var contracturado = 0
+	var pielGrasosa = true
 	
+	method contracturado(){
+		return contracturado
+	}
 	
+	method pielGrasosa(){
+		return pielGrasosa
+	}
 	
+	method recibeMasajes(){
+		0.max(contracturado - 2)
+	}
+	
+	method banioVapor(){
+		pielGrasosa = false
+	}
+	
+	method comeBigMac(){
+		pielGrasosa = true
+	}
+	
+	method bajaALaFosa(){
+		pielGrasosa = true
+		contracturado += 1
+	}
+	
+	method juegaAlPaddle(){
+		contracturado += 3
+	}
+	
+	method diaDeTrabajo(){
+		self.bajaALaFosa(); self.comeBigMac(); self.bajaALaFosa()
+	}
 }
