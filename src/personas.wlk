@@ -2,10 +2,15 @@
 
 object olivia{
 	var gradoConcentracion = 6
-	
+	var banio
 	
 	method recibeMasajes() {
 		gradoConcentracion += 3
+	}
+	
+	method banioVapor(){
+		//para que pueda tomarse un baño de vapor
+		banio = true
 	}
 	
 	method discute(){
